@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "formik": "^2.2.9",
     "nanoid": "^3.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -42,5 +43,16 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMV-777/form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BMV-777/form/issues"
   }
 }
