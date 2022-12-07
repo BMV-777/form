@@ -1,20 +1,24 @@
 import { Component } from 'react';
 import './App.css';
-import { LoginForm } from './component/LoginForm/LoginForm.jsx';
+import { Widget } from 'component/Widget/Widget';
+// import { LoginForm } from './component/LoginForm/LoginForm.jsx';
 // import { Form } from 'component/Form/Form';
 // import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 class App extends Component {
-  // state = {};
-
-  // hasFormSubmitHantler = data => {
-  //   console.log(data);
-  // };
-
   render() {
+    // const { good, neutral, bad } = this.state;
     return (
       <div>
-        <LoginForm />
+        <h1>Please leave feedback</h1>
+        <Widget />
+
+        {/* <span className="">{this.good}</span> */}
+        {/* <br /> */}
+        {/* <span className="">ugyyg</span>
+        <br />
+        <span className="">ugyyg</span> */}
+        {/* <LoginForm /> */}
         {/* <Form onSubmit={this.hasFormSubmitHantler} /> */}
       </div>
     );
@@ -22,3 +26,5 @@ class App extends Component {
 }
 
 export default App;
+
+// options={['good', 'neutral', 'bad']} onLeaveFeedback

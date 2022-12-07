@@ -11,7 +11,7 @@ const Error = styled.p`
   color: blue;
 `;
 const Input = styled(Field)`
-  color: red;
+  color: green;
 `;
 
 const initialValues = {
