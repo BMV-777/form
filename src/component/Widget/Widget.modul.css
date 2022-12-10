@@ -1,4 +1,31 @@
 .list {
   margin-left: 10px;
   font-size: 18px;
+  margin-top: 15px;
+}
+
+.Statistic_grub {
+  font-size: 35px;
+}
+
+.container.show {
+  background-color: aqua;
+}
+
+.text_list {
+  font-size: 25px;
+  margin-left: 10px;
+}
+/* .list:hover {
+  background-color: blue;
+  color: white;
+} */
+
+.Statistic_list {
+  font-size: 20px;
+}
+
+.Statistic {
+  margin-left: 10px;
+  margin-bottom: 25px;
 }

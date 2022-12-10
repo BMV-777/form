@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './Widget.modul.css';
+import WidgetButton from './WidgetButton';
 
 export class Widget extends Component {
   // static defaultProps = {
@@ -12,6 +13,12 @@ export class Widget extends Component {
     bad: 0,
     initialText: 'No feedback given',
     visible: false,
+    total: 0,
+    showBox: false,
+  };
+
+  dermi = () => {
+    this.setState({ showBox: !this.state.showBox });
   };
 
   // prev = () => {
@@ -46,42 +53,33 @@ export class Widget extends Component {
   render() {
     return (
       <div onClick={this.show}>
-        <button
-          type="text"
-          name="good"
-          className="list"
-          onClick={this.handlerGood}
-        >
-          good
-        </button>
-        <button
-          type="text"
-          name="neutral"
-          className="list"
-          onClick={this.handlerNeutral}
-        >
-          neutral
-        </button>
-        <button
-          type="text"
-          name="bad"
-          className="list"
-          onClick={this.handlerBad}
-        >
-          bad
-        </button>
-        <br />
+        <WidgetButton
+          onIncrement={this.handlerGood}
+          onDecrement={this.handlerNeutral}
+          onInserter={this.handlerBad}
+          // onMouseOver={this.dermi}
+          // className={`container${this.state.showBox ? ' show' : ''}`}
+        />
 
-        <span>{this.state.initialText}</span>
+        <br />
+        {this.state.visible ? (
+          ''
+        ) : (
+          <span className="text_list">{this.state.initialText}</span>
+        )}
 
         {this.state.visible && (
-          <div>
-            <p className="Statistic_grub">Statistics</p>
-            <span className="">Good: {this.state.good}</span>
+          <div className="Statistic">
+            <p className="Statistic_grub">
+              <b>Statistics</b>
+            </p>
+            <span className="Statistic_list">Good: {this.state.good}</span>
             <br />
-            <span className="">Neutral: {this.state.neutral}</span>
+            <span className="Statistic_list">
+              Neutral: {this.state.neutral}
+            </span>
             <br />
-            <span className="">Bad: {this.state.bad}</span>
+            <span className="Statistic_list">Bad: {this.state.bad}</span>
           </div>
         )}
       </div>

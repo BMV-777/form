@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import './App.css';
 import { Widget } from 'component/Widget/Widget';
+// import Statistics from 'component/Statistics/Satisrics';
+// import FeedbackOptions from 'component/Fedbeck/Fedback';
 // import { LoginForm } from './component/LoginForm/LoginForm.jsx';
 // import { Form } from 'component/Form/Form';
 // import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
