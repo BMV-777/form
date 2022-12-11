@@ -13,12 +13,10 @@ export class Widget extends Component {
     bad: 0,
     initialText: 'No feedback given',
     visible: false,
-    total: 0,
-    showBox: false,
   };
 
-  dermi = () => {
-    this.setState({ showBox: !this.state.showBox });
+  dermi = e => {
+    e.target.styled.background = 'red';
   };
 
   // prev = () => {
@@ -50,14 +48,26 @@ export class Widget extends Component {
     }));
   };
 
+  // total = e => {
+  //   e.this.handlerGood.length.concat(
+  //     this.handlerNeutral.length + this.handlerBad.length
+  //   );
+  //   console.log(e);
+  // };
+
   render() {
+    // const { good, neutral, bad } = this.state;
     return (
       <div onClick={this.show}>
+        <p>
+          rght:
+          {/* {this.total} */}
+        </p>
         <WidgetButton
           onIncrement={this.handlerGood}
           onDecrement={this.handlerNeutral}
           onInserter={this.handlerBad}
-          // onMouseOver={this.dermi}
+          onRed={() => this.dermi}
           // className={`container${this.state.showBox ? ' show' : ''}`}
         />
 

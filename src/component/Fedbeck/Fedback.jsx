@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { number } from 'prop-types';
-import styles from '../styles/Feedback.module.css';
+import styles from '../Widget/Widget.modul.css';
 
 const FeedbackOptions = ({ listState, onHandle }) => {
   return (
